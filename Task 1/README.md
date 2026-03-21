@@ -38,9 +38,7 @@ The implementation includes:
 ## 🔗 Live Demo
 
 View the live project here:  
-**[Live Demo Link](https://your-live-link-here.com)**
-
-> *(Replace the link above with your deployed URL)*
+**[Live Demo](https://manoj-mukkamula.github.io/UpToSkills/Task%201/)**
 
 ---
 
@@ -94,16 +92,6 @@ Task-1/
 | Font | Poppins 400/500/600/700 | BrandKit `fonts/font-links.md` |
 | Border Radius | 8px / 12px / 14px | BrandKit design tokens |
 | Input Background | `#f3f3f5` | Project `theme.css` |
-
----
-
-## 📸 Screenshots
-
-### Light Mode
-> *(Add screenshot here)*
-
-### Dark Mode
-> *(Add screenshot here)*
 
 ---
 
