@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Settings | Daycare Marketplace</title>
+
+  <!-- Poppins — UptoSkills BrandKit font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!-- ══════════════════════════════════
+         SIDEBAR
+    ══════════════════════════════════ -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="sidebar-brand">
+        <span class="brand-title">Admin Portal</span>
+        <span class="brand-sub">Daycare Marketplace</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item" data-nav="dashboard">
+          <i data-lucide="layout-dashboard"></i> Dashboard
+        </button>
+        <button class="nav-item" data-nav="daycares">
+          <i data-lucide="building-2"></i> Manage Daycares
+        </button>
+        <button class="nav-item" data-nav="parents">
+          <i data-lucide="users"></i> Manage Parents
+        </button>
+        <button class="nav-item" data-nav="reports">
+          <i data-lucide="file-text"></i> Reports
+        </button>
+        <button class="nav-item" data-nav="complaints">
+          <i data-lucide="message-square"></i> Complaints
+        </button>
+        <button class="nav-item" data-nav="profile">
+          <i data-lucide="user-circle"></i> Admin Profile
+        </button>
+        <button class="nav-item" data-nav="logs">
+          <i data-lucide="activity"></i> System Logs
+        </button>
+        <button class="nav-item active" data-nav="settings">
+          <i data-lucide="settings"></i> Settings
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="nav-item back-btn">
+          <i data-lucide="arrow-left"></i> Back to Home
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- ══════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════ -->
+    <main class="main-content">
+
+      <!-- ── TOPBAR ──────────────────────────────────────────
+           Exact Figma layout:
+           Row 1: [hamburger + title/subtitle] ........ [lang-icon | moon-icon]
+           divider
+           Row 2: ................................. [Reset | Save]
+      ─────────────────────────────────────────────────────── -->
+      <header class="topbar">
+
+        <!-- Row 1 -->
+        <div class="topbar-row-1">
+
+          <!-- Left: hamburger (mobile) + page title -->
+          <div class="topbar-title-group">
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle sidebar">
+              <i data-lucide="menu"></i>
+            </button>
+            <div>
+              <h1 class="page-title">Platform Settings</h1>
+              <p class="page-subtitle">Configure and manage platform preferences</p>
+            </div>
+          </div>
+
+          <!-- Right: language + dark mode -->
+          <div class="topbar-icon-group">
+
+            <!-- Language picker — click opens dropdown -->
+            <div class="lang-picker" id="langPicker">
+              <button class="icon-btn" id="langBtn" title="Change Language" aria-haspopup="true" aria-expanded="false">
+                <i data-lucide="languages"></i>
+              </button>
+              <!-- Dropdown -->
+              <div class="lang-dropdown" id="langDropdown" role="menu">
+                <div class="lang-dropdown-title">Select Language</div>
+                <button class="lang-option active" data-lang="English"   role="menuitem">🇬🇧 English</button>
+                <button class="lang-option"         data-lang="Hindi"    role="menuitem">🇮🇳 Hindi</button>
+                <button class="lang-option"         data-lang="Telugu"   role="menuitem">🇮🇳 Telugu</button>
+                <button class="lang-option"         data-lang="Tamil"    role="menuitem">🇮🇳 Tamil</button>
+                <button class="lang-option"         data-lang="Kannada"  role="menuitem">🇮🇳 Kannada</button>
+              </div>
+            </div>
+
+            <button class="icon-btn" id="darkModeBtn" title="Toggle dark mode">
+              <i data-lucide="moon" id="darkIcon"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- Divider -->
+        <div class="topbar-divider"></div>
+
+        <!-- Row 2 -->
+        <div class="topbar-row-2">
+
+          <!-- Right: Reset + Save — pushed to far right -->
+          <div class="topbar-action-group">
+            <button class="btn btn-secondary" id="resetBtn">
+              <i data-lucide="rotate-ccw"></i>
+              <span class="btn-label">Reset to Default</span>
+            </button>
+            <button class="btn btn-primary" id="saveBtn" disabled>
+              <i data-lucide="save"></i>
+              Save Changes
+            </button>
+          </div>
+
+        </div>
+
+      </header>
+
+      <!-- Page Body -->
+      <div class="page-body">
+
+        <!-- Tab Bar -->
+        <div class="tab-bar" role="tablist">
+          <button class="tab-btn active" data-tab="general" role="tab">
+            <i data-lucide="settings-2"></i> General
+          </button>
+          <button class="tab-btn" data-tab="notifications" role="tab">
+            <i data-lucide="bell"></i> Notifications
+          </button>
+          <button class="tab-btn" data-tab="security" role="tab">
+            <i data-lucide="shield"></i> Security
+          </button>
+          <button class="tab-btn" data-tab="payment" role="tab">
+            <i data-lucide="credit-card"></i> Payment
+          </button>
+          <button class="tab-btn" data-tab="platform" role="tab">
+            <i data-lucide="layout-template"></i> Platform
+          </button>
+        </div>
+
+        <!-- ── GENERAL TAB ── -->
+        <div class="tab-panel active" id="tab-general">
+          <div class="settings-card">
+
+            <div class="card-header">
+              <div class="card-header-icon">
+                <i data-lucide="globe"></i>
+              </div>
+              <div>
+                <h2 class="card-title">General Configuration</h2>
+                <p class="card-subtitle">Configure basic platform information and preferences</p>
+              </div>
+            </div>
+
+            <div class="card-divider"></div>
+
+            <form class="settings-form" id="settingsForm" novalidate>
+
+              <div class="form-group">
+                <label class="form-label" for="platformName">Platform Name</label>
+                <input class="form-input" type="text" id="platformName"
+                  value="Daycare Marketplace" placeholder="Enter platform name" />
+                <span class="form-error" id="err-platformName"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="timezone">Timezone</label>
+                <!-- Wrapper div fixes the duplicate arrow issue -->
+                <div class="select-wrap">
+                  <select class="form-select" id="timezone">
+                    <option selected>Asia/Kolkata (IST)</option>
+                    <option>Asia/Dubai (GST)</option>
+                    <option>America/New_York (EST)</option>
+                    <option>America/Los_Angeles (PST)</option>
+                    <option>Europe/London (GMT)</option>
+                    <option>Europe/Paris (CET)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="supportEmail">Support Email</label>
+                <input class="form-input" type="email" id="supportEmail"
+                  value="support@daycmarketplace.com" placeholder="support@example.com" />
+                <span class="form-error" id="err-supportEmail"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="supportPhone">Support Phone</label>
+                <input class="form-input" type="tel" id="supportPhone"
+                  value="+91 80 1234 5678" placeholder="+91 XXXXX XXXXX" />
+                <span class="form-error" id="err-supportPhone"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="defaultLanguage">Default Language</label>
+                <div class="select-wrap">
+                  <select class="form-select" id="defaultLanguage">
+                    <option selected>English</option>
+                    <option>Hindi</option>
+                    <option>Telugu</option>
+                    <option>Tamil</option>
+                    <option>Kannada</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="currency">Currency</label>
+                <div class="select-wrap">
+                  <select class="form-select" id="currency">
+                    <option selected>INR (₹)</option>
+                    <option>USD ($)</option>
+                    <option>EUR (€)</option>
+                    <option>GBP (£)</option>
+                  </select>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Other tab panels (placeholder) -->
+        <div class="tab-panel" id="tab-notifications">
+          <div class="settings-card placeholder-card">
+            <i data-lucide="bell"></i>
+            <h3>Notifications Settings</h3>
+            <p>Not part of the current task.</p>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-security">
+          <div class="settings-card placeholder-card">
+            <i data-lucide="shield"></i>
+            <h3>Security Settings</h3>
+            <p>Not part of the current task.</p>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-payment">
+          <div class="settings-card placeholder-card">
+            <i data-lucide="credit-card"></i>
+            <h3>Payment Settings</h3>
+            <p>Not part of the current task.</p>
+          </div>
+        </div>
+        <div class="tab-panel" id="tab-platform">
+          <div class="settings-card placeholder-card">
+            <i data-lucide="layout-template"></i>
+            <h3>Platform Settings</h3>
+            <p>Not part of the current task.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <span class="toast-icon" id="toastIcon"></span>
+    <span class="toast-msg"  id="toastMsg"></span>
+    <button class="toast-close" id="toastClose">×</button>
+  </div>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
