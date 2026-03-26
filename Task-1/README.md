@@ -42,7 +42,7 @@ The implementation includes:
 ## 🔗 Live Demo
 
 View the live project here:  
-**[Live Demo](https://manoj-mukkamula.github.io/UpToSkills/Task%201/)**
+**[Live Demo](https://admin-settings-generaltab.vercel.app/)**
 
 ---
 
