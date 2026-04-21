@@ -12,8 +12,10 @@ The goal of Task 2 was to build the Admin Dashboard page of the LittleSteps plat
 ---
 
 ## Live Demo
+## 🔗 Live Demo
 
-Coming soon after deployment.
+View the live project here:  
+**[Live Demo](https://admin-dashboard-one-pearl.vercel.app/)**
 
 ---
 
