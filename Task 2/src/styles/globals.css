@@ -1,0 +1,64 @@
+/* ─── LittleSteps Design Tokens ─── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Brand */
+  --orange:       #F97316;
+  --orange-light: #FFF3E8;
+  --orange-mid:   #FDBA74;
+
+  /* Sidebar — light theme matching Figma */
+  --sidebar-bg:   #FFFFFF;
+  --sidebar-text: #4B5563;
+  --sidebar-border: #E8EDF5;
+
+  /* Surface */
+  --bg-page:      #F4F6FA;
+  --bg-card:      #FFFFFF;
+  --bg-row:       #F8FAFC;
+
+  /* Text */
+  --text-primary:   #0F172A;
+  --text-secondary: #475569;
+  --text-muted:     #94A3B8;
+
+  /* Border */
+  --border:       #E8EDF5;
+  --border-light: #F1F5F9;
+
+  /* Radius */
+  --r-sm:  8px;
+  --r-md:  12px;
+  --r-lg:  16px;
+  --r-xl:  20px;
+
+  /* Shadow */
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 4px 16px rgba(15, 23, 42, 0.10);
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 99px; }
